@@ -6,7 +6,9 @@
   "private": true,
   "packageManager": "pnpm@11.21.0",
   "scripts": {
-    "build": "tsc && node scripts/build-site.mjs",
+    "dev": "vite",
+    "build": "pnpm typecheck && vite build",
+    "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "tsc --noEmit",
@@ -14,6 +16,7 @@
   },
   "devDependencies": {
     "typescript": "^5.5.4",
+    "vite": "^8.2.2",
     "vitest": "^2.1.1"
   }
 }
