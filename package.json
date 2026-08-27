@@ -1,0 +1,18 @@
+{
+  "name": "git-practice",
+  "version": "0.1.0",
+  "description": "A TypeScript + Vitest + pnpm project for practicing Git branching, merging and CI/CD with GitHub Actions.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc && node scripts/build-site.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.1"
+  }
+}

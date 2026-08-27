@@ -1,0 +1,32 @@
+import { describe, expect, it } from "vitest";
+import { add, divide, max, min, multiply, subtract } from "./calculator";
+
+describe("calculator", () => {
+  it("adds two numbers", () => {
+    expect(add(2, 3)).toBe(5);
+  });
+
+  it("subtracts two numbers", () => {
+    expect(subtract(10, 4)).toBe(6);
+  });
+
+  it("multiplies two numbers", () => {
+    expect(multiply(6, 7)).toBe(42);
+  });
+
+  it("divides two numbers", () => {
+    expect(divide(10, 2)).toBe(5);
+  });
+
+  it("throws when dividing by zero", () => {
+    expect(() => divide(1, 0)).toThrow("Cannot divide by zero");
+  });
+
+  it("returns the max value", () => {
+    expect(max(1, 5, 9, 3)).toBe(9);
+  });
+
+  it("returns the min value", () => {
+    expect(min(4, 2, 8, 1)).toBe(1);
+  });
+});
