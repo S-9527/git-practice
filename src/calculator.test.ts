@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { add, divide, max, min, multiply, subtract } from "./calculator";
+import { add, divide, max, min, modulo, multiply, subtract } from "./calculator";
 
 describe("calculator", () => {
   it("adds two numbers", () => {
@@ -28,5 +28,13 @@ describe("calculator", () => {
 
   it("returns the min value", () => {
     expect(min(4, 2, 8, 1)).toBe(1);
+  });
+
+  it("returns the modulo remainder", () => {
+    expect(modulo(10, 3)).toBe(1);
+  });
+
+  it("throws when modulo by zero", () => {
+    expect(() => modulo(5, 0)).toThrow("Cannot divide by zero");
   });
 });
