@@ -6,19 +6,21 @@ A practice repository for Git branching, GitHub Pull Requests, and GitHub Action
 
 - **TypeScript** — typed source under `src/`
 - **Vitest** — unit tests (`src/**/*.test.ts`)
+- **Vite** — dev server and production bundler
 - **pnpm** — package manager
-- **GitHub Actions** — CI pipeline (lint / test / typecheck / build)
-- **GitHub Pages** — deploy built static site in CI
+- **GitHub Actions** — CI pipeline (typecheck / build / test) and GitHub Pages deployment
 
 ## Commands
 
 | Command             | Description                          |
 | ------------------- | ------------------------------------ |
 | `pnpm install`      | Install dependencies                 |
+| `pnpm dev`          | Start Vite dev server                |
 | `pnpm typecheck`    | Type-check (tsc --noEmit)            |
 | `pnpm test`         | Run Vitest unit tests                |
 | `pnpm test:watch`   | Run tests in watch mode              |
-| `pnpm build`        | Compile TS and build static site to `dist/` |
+| `pnpm build`        | Type-check and build to `dist/` via Vite |
+| `pnpm preview`      | Preview the production build         |
 
 ## Branch / Commit Conventions
 

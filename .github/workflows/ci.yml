@@ -30,7 +30,7 @@ jobs:
       - name: Type-check
         run: pnpm typecheck
 
-      - name: Lint (build)
+      - name: Build
         run: pnpm build
 
       - name: Run tests
