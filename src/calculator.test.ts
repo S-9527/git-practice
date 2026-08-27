@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { add, divide, max, min, modulo, multiply, subtract } from "./calculator";
+import { add, divide, max, min, modulo, multiply, percentage, subtract } from "./calculator";
 
 describe("calculator", () => {
   it("adds two numbers", () => {
@@ -36,5 +36,13 @@ describe("calculator", () => {
 
   it("throws when modulo by zero", () => {
     expect(() => modulo(5, 0)).toThrow("Cannot divide by zero");
+  });
+
+  it("computes a percentage", () => {
+    expect(percentage(25, 200)).toBe(12.5);
+  });
+
+  it("throws when percentage total is zero", () => {
+    expect(() => percentage(1, 0)).toThrow("Total cannot be zero");
   });
 });
